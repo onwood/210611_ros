@@ -1,0 +1,148 @@
+<teleop_twist_keyboard topic 종류와 정보>
+
+/cmd_vel
+Type: geometry_msgs/Twist
+
+Publishers: 
+ * /teleop_twist_keyboard (http://yh-Samsung-DeskTop-System:41913/)
+
+Subscribers: None
+
+---
+
+/rosout
+Type: rosgraph_msgs/Log
+
+Publishers: 
+ * /teleop_twist_keyboard (http://yh-Samsung-DeskTop-System:41913/)
+ * /turtlesim (http://yh-Samsung-DeskTop-System:39517/)
+
+Subscribers: 
+ * /rosout (http://yh-Samsung-DeskTop-System:39737/)
+
+
+---
+
+/rosout_agg
+Type: rosgraph_msgs/Log
+
+Publishers: 
+ * /rosout (http://yh-Samsung-DeskTop-System:39737/)
+
+Subscribers: None
+
+
+---
+
+
+/turtle1/cmd_vel
+Type: geometry_msgs/Twist
+
+Publishers: None
+
+Subscribers: 
+ * /turtlesim (http://yh-Samsung-DeskTop-System:39517/)
+
+
+---
+
+
+/turtle1/color_sensor
+Type: turtlesim/Color
+
+Publishers: 
+ * /turtlesim (http://yh-Samsung-DeskTop-System:39517/)
+
+Subscribers: None
+
+---
+
+/turtle1/pose
+Type: turtlesim/Pose
+
+Publishers: 
+ * /turtlesim (http://yh-Samsung-DeskTop-System:39517/)
+
+Subscribers: None
+
+
+
+<turtlesim_node topic&service 종류와 정보>
+/cmd_vel
+Type: geometry_msgs/Twist
+
+Publishers: 
+ * /teleop_twist_keyboard (http://yh-Samsung-DeskTop-System:41913/)
+
+Subscribers: None
+
+---
+
+/rosout
+Type: rosgraph_msgs/Log
+
+Publishers: 
+ * /teleop_twist_keyboard (http://yh-Samsung-DeskTop-System:41913/)
+ * /turtlesim (http://yh-Samsung-DeskTop-System:39517/)
+
+Subscribers: 
+ * /rosout (http://yh-Samsung-DeskTop-System:39737/)
+
+
+---
+
+/rosout_agg
+Type: rosgraph_msgs/Log
+
+Publishers: 
+ * /rosout (http://yh-Samsung-DeskTop-System:39737/)
+
+Subscribers: None
+
+
+---
+
+
+/turtle1/cmd_vel
+Type: geometry_msgs/Twist
+
+Publishers: None
+
+Subscribers: 
+ * /turtlesim (http://yh-Samsung-DeskTop-System:39517/)
+
+
+---
+
+
+/turtle1/color_sensor
+Type: turtlesim/Color
+
+Publishers: 
+ * /turtlesim (http://yh-Samsung-DeskTop-System:39517/)
+
+Subscribers: None
+
+---
+
+/turtle1/pose
+Type: turtlesim/Pose
+
+Publishers: 
+ * /turtlesim (http://yh-Samsung-DeskTop-System:39517/)
+
+Subscribers: None
+
+---
+/clear
+/kill
+/reset
+/rosout/get_loggers
+/rosout/set_logger_level
+/spawn
+/turtle1/set_pen
+/turtle1/teleport_absolute
+/turtle1/teleport_relative
+/turtlesim/get_loggers
+/turtlesim/set_logger_level
+
