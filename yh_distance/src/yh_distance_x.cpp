@@ -5,11 +5,30 @@
 
 //int distance
 
+double old_vel == 0;
+ros::Time start_time;
+
 void msgCallback(const geometry_msgs::Twist::ConstPtr&msg) //const: 상수
 {
 	 
     // time이라는 변수에 현재 시간할당
     ROS_INFO("receive msg = %f", msg -> linear.x);
+    if (msg -> linear.x > 0 && old_vel == 0)
+    {   
+        start_time = ros::Time::now();
+        old_vel = msg -> linear.x;
+    }
+    if (msg -> linear.x == 0 && old_vel > 0)
+    {
+        ros::Time end_time = ros::Time::now();
+        ros::Duration duration = end_time - start_time; // 이동한 시간
+
+        double duration_sec duration.toSec();
+        double distance = duration_sec * old_vel; // 거리 = 시간 * 속력
+
+        ROS_INFO("distance: %lf", distance);
+        old_vel = 0;
+    }
 	//ROS_INFO("receive msg = %d", msg -> stamp.nsec);
 	//ROS_INFO("receive msg = %d", msg -> data);
 
@@ -31,7 +50,7 @@ int main(int argc, char** argv)
     ros::NodeHandle nh;
 
     //ros::Time start_time = ros::Time::now();
-    ros::Subscriber sub = nh.subscribe<geometry_msgs::Twist>("cmd_vel", 100, msgCallback);    
+    ros::Subscriber sub = nh.subscribe<geometry_msgs::Twist>("/cmd_vel", 100, msgCallback);    
     //ros::Time end_time = ros::Time::now();
     //ros::Duration duration = end_time - start_time;
     //ROS_INFO("receive duration = %f", duration);

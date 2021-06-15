@@ -1,5 +1,6 @@
 #include "ros/ros.h"
 #include "yh_double_check/yh_double_check_msg.h" 
+//#include <std_msgs/Int32.h>
 
 int main(int argc, char **argv)
 {
@@ -10,7 +11,8 @@ int main(int argc, char **argv)
 
 	ros::Rate loop_rate(2);
 
-	yh_double_check::yh_double_check_msg msg; 
+	yh_double_check::yh_double_check_msg msg;
+	//std_msgs::Int32 msg;
 	
 	while(ros::ok()) 
 	{
@@ -31,6 +33,21 @@ int main(int argc, char **argv)
 		
 		pub.publish(msg); 
 		loop_rate.sleep();
+
+
+		// [선생님 풀이]
+		// 선생님은 토픽을 2개로 분리해서 풀었음
+		// if (msg.data == 0)
+		// {
+		// 	msg.data = 1;
+		// }
+		// else
+		// {
+		// 	msg.data = 0;
+		// }
+		// pub.publish(msg); 
+		// loop_rate.sleep();
+
 	}
 	return 0;
 }
